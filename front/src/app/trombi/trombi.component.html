@@ -1,0 +1,74 @@
+<ngb-tabset>
+  <ngb-tab title="All">
+    <ng-template ngbTabContent>
+      <div *ngFor="let doc of docs" class="Portfolio"><a href="#!"><img class="card-img" src="{{doc.photo}}" alt=""></a>
+        <div class="desc">
+          {{doc.name}}
+        </div>
+      </div>
+    </ng-template>
+
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle><b>IL</b></ng-template>
+    <ng-template ngbTabContent>
+      <ng-container *ngFor="let doc of docs">
+        <div *ngIf="doc.spe=='IL'" class="Portfolio"><a href="#!"><img class="card-img" src="{{doc.photo}}" alt=""></a>
+          <div class="desc">
+            {{doc.name}}
+          </div>
+        </div>
+      </ng-container>
+
+
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="ILA">
+    <ng-template ngbTabContent>
+        <ng-container *ngFor="let doc of docs">
+            <div *ngIf="doc.spe=='ILA'" class="Portfolio"><a href="#!"><img class="card-img" src="{{doc.photo}}" alt=""></a>
+              <div class="desc">
+                {{doc.name}}
+              </div>
+            </div>
+          </ng-container>
+    </ng-template>
+  </ngb-tab>
+
+  <ngb-tab title="Cyber">
+      <ng-template ngbTabContent>
+          <ng-container *ngFor="let doc of docs">
+              <div *ngIf="doc.spe=='Cyber'" class="Portfolio"><a href="#!"><img class="card-img" src="{{doc.photo}}" alt=""></a>
+                <div class="desc">
+                  {{doc.name}}
+                </div>
+              </div>
+            </ng-container>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="CCN">
+        <ng-template ngbTabContent>
+            <ng-container *ngFor="let doc of docs">
+                <div *ngIf="doc.spe=='CCN'" class="Portfolio"><a href="#!"><img class="card-img" src="{{doc.photo}}" alt=""></a>
+                  <div class="desc">
+                    {{doc.name}}
+                  </div>
+                </div>
+              </ng-container>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="RSH">
+          <ng-template ngbTabContent>
+              <ng-container *ngFor="let doc of docs">
+                  <div *ngIf="doc.spe=='RSH'" class="Portfolio"><a href="#!"><img class="card-img" src="{{doc.photo}}" alt=""></a>
+                    <div class="desc">
+                      {{doc.name}}
+                    </div>
+                  </div>
+                </ng-container>
+          </ng-template>
+        </ngb-tab>
+
+</ngb-tabset>

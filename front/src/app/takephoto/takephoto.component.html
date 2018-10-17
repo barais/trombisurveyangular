@@ -1,0 +1,28 @@
+<div class="container">
+
+  <!--    <div class="row">
+          <button (click)="start()" class="btn btn-primary">Play</button>
+          <button (click)="toggleControls()" class="btn btn-success">Toggle Controls</button>
+          <button (click)="pause()" class="btn btn-warning">Pause</button>
+          <button (click)="resume()" class="btn btn-info">Resume</button>
+          <button (click)="sound()" class="btn btn-danger">Play with Sound</button>
+        </div>-->
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="camera">
+        <video id="video" width="200px" #videoElement></video>
+        <button (click)="takePicture()" id="startbutton">Take photo</button>
+      </div>
+      <canvas id="canvas" #myCanvas>
+      </canvas>
+      <div class="output">
+        <img id="photo" alt="The screen capture will appear in this box." [src]="imgdata">
+        <button (click)="sendPicture()" id="sendbutton">Send photo</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
