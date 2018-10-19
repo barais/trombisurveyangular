@@ -50,7 +50,6 @@ router.post('/photos', function (req, res) {
     trombi.find(mangoQuery).then((doc) => {
         res.send(doc);
     });
-
 });
 
 
